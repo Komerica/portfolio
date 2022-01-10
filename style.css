@@ -1,3 +1,35 @@
-.navbar__logo img {
-  width: 30px;
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-green: #006475;
+  --color-dark-green: #0d353f;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #017979;
+  --color-yellow: #f6f5c7;
+  --color-orange: #f57d6c;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
 }
