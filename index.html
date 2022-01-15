@@ -93,8 +93,8 @@
           </p>
         </div>
       </div>
-      <div class="about__languages">
-        <div class="language">
+      <div class="about_languages">
+        <div class="language1">
           <img
             width="50px"
             src="imgs/languages/korean.png"
@@ -104,7 +104,7 @@
           <p class="language__name">Korean</p>
           <p class="language__level">上(Bar로 표시)</p>
         </div>
-        <div class="language">
+        <div class="language1">
           <img
             width="50px"
             src="imgs/languages/english.png"
@@ -114,7 +114,7 @@
           <p class="language__name">English</p>
           <p class="language__level">中上</p>
         </div>
-        <div class="language">
+        <div class="language1">
           <img
             width="50px"
             src="imgs/languages/chinese.png"
@@ -124,6 +124,28 @@
           <p class="language__name">Chinese</p>
           <p class="language__level">中</p>
         </div>
+      </div>
+
+      <div class="about__languages">
+        <div class="language__outer">
+          <div class="language__inner">
+            <div id="language__number"></div>
+          </div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          width="160px"
+          height="160px"
+        >
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#3895d3" />
+              <stop offset="100%" stop-color="#072f5f" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
       </div>
     </section>
     <!-- Skills -->
@@ -310,5 +332,17 @@
       </div>
       <p class="contact__rights">2022 Georgian Coding - All rights reserved</p>
     </section>
+    <script>
+      let languageNumber = document.getElementById("language__number");
+      let counter = 0;
+      setInterval(() => {
+        if (counter == 50) {
+          clearInterval();
+        } else {
+          counter += 1;
+          language__number.innerHTML = counter + "%";
+        }
+      }, 20);
+    </script>
   </body>
 </html>

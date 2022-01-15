@@ -1,4 +1,6 @@
-/* Global */
+/**************/
+/*** Global ***/
+/**************/
 :root {
   /* Color */
   --color-white: #ffffff;
@@ -33,7 +35,9 @@
   --animation-duration: 300ms;
 }
 
-/* Universal tags */
+/**********************/
+/*** Universal tags ***/
+/**********************/
 * {
   box-sizing: border-box;
 }
@@ -61,7 +65,9 @@ button {
   outline: none;
 }
 
-/* Typography */
+/******************/
+/*** Typography ***/
+/******************/
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
@@ -90,7 +96,9 @@ p {
   margin: 4px 0;
 }
 
-/* Navbar */
+/**************/
+/*** Navbar ***/
+/**************/
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -123,7 +131,9 @@ p {
   background-color: var(--color-dark-green);
 }
 
-/* Home */
+/************/
+/*** Home ***/
+/************/
 #home {
   background: rgb(7, 47, 95);
   background: linear-gradient(
@@ -157,7 +167,9 @@ p {
   border-radius: 4px;
 }
 
-/* Section common */
+/**********************/
+/*** Section common ***/
+/**********************/
 .section {
   padding: 50px;
   text-align: center;
@@ -168,7 +180,9 @@ p {
   margin: auto;
 }
 
-/* About */
+/*************/
+/*** About ***/
+/*************/
 .about__majors {
   display: flex;
   justify-content: space-between;
@@ -203,7 +217,60 @@ p {
   font-size: var(--font-small);
 }
 
-/* Skill */
+/* Circle Progress Bar */
+.about__languages {
+  /* background-color: var(--color-blue); */
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  position: relative;
+}
+.language__outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.language__inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+#language__number {
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-grey);
+}
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 435;
+  stroke-dashoffset: 435;
+  animation: anim 1s linear forwards;
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 217.5;
+  }
+}
+
+/*************/
+/*** Skill ***/
+/*************/
 #skills {
   background-color: var(--color-yellow);
 }
