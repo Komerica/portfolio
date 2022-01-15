@@ -259,6 +259,11 @@ p {
 }
 
 /* Languages */
+.about__languages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .lang__circular {
   margin: auto;
   height: 100px;
@@ -280,10 +285,10 @@ p {
 }
 .lang__circular .lang__number {
   position: absolute;
-  top: 50%;
+  top: 110%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 9;
   font-weight: var(--weight-semi-bold);
   color: #4158d0;
 }
@@ -324,4 +329,11 @@ p {
   100% {
     transform: rotate(180deg);
   }
+}
+.lang__logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 10;
+  transform: scale(1.61);
 }

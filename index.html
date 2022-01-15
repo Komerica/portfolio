@@ -126,6 +126,7 @@
         </div>
       </div>
       <!-- Languages -->
+
       <div class="about__languages">
         <div class="lang__circular">
           <div class="lang__inner"></div>
@@ -138,6 +139,48 @@
               <div class="lang__progress"></div>
             </div>
           </div>
+          <img
+            width="50px"
+            src="imgs/languages/korean.png"
+            alt="Chinese"
+            class="lang__logo"
+          />
+        </div>
+        <div class="lang__circular">
+          <div class="lang__inner"></div>
+          <div class="lang__number">0%</div>
+          <div class="lang__circle">
+            <div class="lang__bar lang__left">
+              <div class="lang__progress"></div>
+            </div>
+            <div class="lang__bar lang__right">
+              <div class="lang__progress"></div>
+            </div>
+          </div>
+          <img
+            width="50px"
+            src="imgs/languages/english.png"
+            alt="Chinese"
+            class="lang__logo"
+          />
+        </div>
+        <div class="lang__circular">
+          <div class="lang__inner"></div>
+          <div class="lang__number">0%</div>
+          <div class="lang__circle">
+            <div class="lang__bar lang__left">
+              <div class="lang__progress"></div>
+            </div>
+            <div class="lang__bar lang__right">
+              <div class="lang__progress"></div>
+            </div>
+          </div>
+          <img
+            width="50px"
+            src="imgs/languages/chinese.png"
+            alt="Chinese"
+            class="lang__logo"
+          />
         </div>
       </div>
     </section>
@@ -327,7 +370,7 @@
     </section>
     <!-- Languages Circular Progress Bar JS -->
     <script>
-      const numb = document.querySelector(".lang__number");
+      const numb = document.querySelectorAll(".lang__number")[0];
       let counter = 0;
       setInterval(() => {
         if (counter == 100) {
