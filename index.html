@@ -93,7 +93,7 @@
           </p>
         </div>
       </div>
-      <div class="about__languages">
+      <div class="about_language">
         <div class="language">
           <img
             width="50px"
@@ -123,6 +123,21 @@
           />
           <p class="language__name">Chinese</p>
           <p class="language__level">中</p>
+        </div>
+      </div>
+      <!-- Languages -->
+      <div class="about__languages">
+        <div class="lang__circular">
+          <div class="lang__inner"></div>
+          <div class="lang__number">0%</div>
+          <div class="lang__circle">
+            <div class="lang__bar lang__left">
+              <div class="lang__progress"></div>
+            </div>
+            <div class="lang__bar lang__right">
+              <div class="lang__progress"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -310,5 +325,18 @@
       </div>
       <p class="contact__rights">2022 Georgian Coding - All rights reserved</p>
     </section>
+    <!-- Languages Circular Progress Bar JS -->
+    <script>
+      const numb = document.querySelector(".lang__number");
+      let counter = 0;
+      setInterval(() => {
+        if (counter == 100) {
+          clearInterval();
+        } else {
+          counter += 1;
+          numb.textContent = counter + "%";
+        }
+      }, 80);
+    </script>
   </body>
 </html>
