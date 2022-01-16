@@ -259,10 +259,19 @@ p {
 }
 
 /* Languages */
+.language__name {
+  font-size: var(--font-regular);
+  color: var(--color-dark-grey);
+  margin: auto;
+  position: absolute;
+  left: 20%;
+  top: -28px;
+}
 .about__languages {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 120px 0;
 }
 .lang__circular {
   margin: auto;
@@ -308,11 +317,46 @@ p {
   clip: rect(0px, 50px, 100px, 0px);
   background: #4158d0;
 }
+.lang__circular .lang__bar .lang__progress2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #4158d0;
+}
+.lang__circular .lang__bar .lang__progress3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #4158d0;
+}
 .lang__circle .lang__left .lang__progress {
   z-index: 1;
-  animation: left 4s linear both;
+  animation: left 1s linear both;
 }
+.lang__circle .lang__left .lang__progress2 {
+  z-index: 1;
+  animation: left2 1s linear both;
+}
+.lang__circle .lang__left .lang__progress3 {
+  z-index: 1;
+  animation: left3 1s linear both;
+}
+
 @keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes left2 {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes left3 {
   100% {
     transform: rotate(180deg);
   }
@@ -322,12 +366,30 @@ p {
   transform: rotate(180deg);
 }
 .lang__circle .lang__right .lang__progress {
-  animation: right 4s linear both;
-  animation-delay: 4s;
+  animation: right 1s linear both;
+  animation-delay: 1s;
+}
+.lang__circle .lang__right .lang__progress2 {
+  animation: right2 1s linear both;
+  animation-delay: 1s;
+}
+.lang__circle .lang__right .lang__progress3 {
+  animation: right3 1s linear both;
+  animation-delay: 1s;
 }
 @keyframes right {
   100% {
     transform: rotate(180deg);
+  }
+}
+@keyframes right2 {
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes right3 {
+  100% {
+    transform: rotate(0deg);
   }
 }
 .lang__logo {

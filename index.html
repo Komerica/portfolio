@@ -93,96 +93,6 @@
           </p>
         </div>
       </div>
-      <div class="about_language">
-        <div class="language">
-          <img
-            width="50px"
-            src="imgs/languages/korean.png"
-            alt=""
-            class="language__logo"
-          />
-          <p class="language__name">Korean</p>
-          <p class="language__level">上(Bar로 표시)</p>
-        </div>
-        <div class="language">
-          <img
-            width="50px"
-            src="imgs/languages/english.png"
-            alt="English"
-            class="language__logo"
-          />
-          <p class="language__name">English</p>
-          <p class="language__level">中上</p>
-        </div>
-        <div class="language">
-          <img
-            width="50px"
-            src="imgs/languages/chinese.png"
-            alt="Chinese"
-            class="language__logo"
-          />
-          <p class="language__name">Chinese</p>
-          <p class="language__level">中</p>
-        </div>
-      </div>
-      <!-- Languages -->
-
-      <div class="about__languages">
-        <div class="lang__circular">
-          <div class="lang__inner"></div>
-          <div class="lang__number">0%</div>
-          <div class="lang__circle">
-            <div class="lang__bar lang__left">
-              <div class="lang__progress"></div>
-            </div>
-            <div class="lang__bar lang__right">
-              <div class="lang__progress"></div>
-            </div>
-          </div>
-          <img
-            width="50px"
-            src="imgs/languages/korean.png"
-            alt="Chinese"
-            class="lang__logo"
-          />
-        </div>
-        <div class="lang__circular">
-          <div class="lang__inner"></div>
-          <div class="lang__number">0%</div>
-          <div class="lang__circle">
-            <div class="lang__bar lang__left">
-              <div class="lang__progress"></div>
-            </div>
-            <div class="lang__bar lang__right">
-              <div class="lang__progress"></div>
-            </div>
-          </div>
-          <img
-            width="50px"
-            src="imgs/languages/english.png"
-            alt="Chinese"
-            class="lang__logo"
-          />
-        </div>
-        <div class="lang__circular">
-          <div class="lang__inner"></div>
-          <div class="lang__number">0%</div>
-          <div class="lang__circle">
-            <div class="lang__bar lang__left">
-              <div class="lang__progress"></div>
-            </div>
-            <div class="lang__bar lang__right">
-              <div class="lang__progress"></div>
-            </div>
-          </div>
-          <img
-            width="50px"
-            src="imgs/languages/chinese.png"
-            alt="Chinese"
-            class="lang__logo"
-          />
-        </div>
-      </div>
     </section>
     <!-- Skills -->
     <section id="skills" class="section">
@@ -244,6 +154,70 @@
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="about__languages">
+        <!-- Korean -->
+        <div class="lang__circular">
+          <h3 class="language__name">Korean</h3>
+          <div class="lang__inner"></div>
+          <div class="lang__number">0%</div>
+          <div class="lang__circle">
+            <div class="lang__bar lang__left">
+              <div class="lang__progress"></div>
+            </div>
+            <div class="lang__bar lang__right">
+              <div class="lang__progress"></div>
+            </div>
+          </div>
+          <img
+            width="50px"
+            src="imgs/languages/korean.png"
+            alt="Chinese"
+            class="lang__logo"
+          />
+        </div>
+        <!-- English -->
+        <div class="lang__circular">
+          <h3 class="language__name">English</h3>
+          <div class="lang__inner"></div>
+          <div class="lang__number">0%</div>
+          <div class="lang__circle">
+            <div class="lang__bar lang__left">
+              <div class="lang__progress2"></div>
+            </div>
+            <div class="lang__bar lang__right">
+              <div class="lang__progress2"></div>
+            </div>
+          </div>
+          <img
+            width="50px"
+            src="imgs/languages/english.png"
+            alt="Chinese"
+            class="lang__logo"
+          />
+        </div>
+        <!-- Chinese -->
+        <div class="lang__circular">
+          <h3 class="language__name">Chinese</h3>
+          <div class="lang__inner"></div>
+          <div class="lang__number">0%</div>
+          <div class="lang__circle">
+            <div class="lang__bar lang__left">
+              <div class="lang__progress3"></div>
+            </div>
+            <div class="lang__bar lang__right">
+              <div class="lang__progress3"></div>
+            </div>
+          </div>
+          <img
+            width="50px"
+            src="imgs/languages/chinese.png"
+            alt="Chinese"
+            class="lang__logo"
+          />
         </div>
       </div>
     </section>
@@ -379,7 +353,27 @@
           counter += 1;
           numb.textContent = counter + "%";
         }
-      }, 80);
+      }, 20);
+      const numb2 = document.querySelectorAll(".lang__number")[1];
+      let counter2 = 0;
+      setInterval(() => {
+        if (counter2 == 75) {
+          clearInterval();
+        } else {
+          counter2 += 1;
+          numb2.textContent = counter2 + "%";
+        }
+      }, 25);
+      const numb3 = document.querySelectorAll(".lang__number")[2];
+      let counter3 = 0;
+      setInterval(() => {
+        if (counter3 == 50) {
+          clearInterval();
+        } else {
+          counter3 += 1;
+          numb3.textContent = counter3 + "%";
+        }
+      }, 20);
     </script>
   </body>
 </html>
