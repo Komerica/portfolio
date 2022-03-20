@@ -571,4 +571,26 @@ p {
     width: 100%;
     display: none;
   }
+  .about__majors {
+    flex-direction: column;
+  }
+  .major {
+    margin-bottom: 38px;
+  }
+  .skillset {
+    flex-direction: column;
+  }
+  .about__languages {
+    flex-direction: column;
+  }
+  .lang__circular:nth-child(-n + 2) {
+    margin-bottom: 240px;
+  }
+  .project {
+    flex-grow: 1;
+  }
+  .testimonial__avatar {
+    width: 80px;
+    height: 80px;
+  }
 }
