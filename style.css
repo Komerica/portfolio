@@ -467,6 +467,9 @@ p {
   margin: 2px;
   background-color: var(--color-light-white);
 }
+.project.invisible {
+  display: none;
+}
 .project__img {
   max-width: 100%;
   max-height: 100%;
@@ -581,6 +584,7 @@ p {
   pointer-events: none;
   transition: all var(--animation-duration) ease-in;
 }
+
 .arrow-up.visible {
   opacity: 1;
   pointer-events: auto;
