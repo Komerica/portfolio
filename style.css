@@ -106,7 +106,7 @@ p {
 
 #navbar.navbar--dark {
   background-color: var(--color-dark-blue);
-  padding: 8px;
+  padding: 16px;
 }
 
 .navbar__logo {
@@ -501,16 +501,16 @@ p {
   transform: translateY(0px);
 }
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-yellow);
 }
 .project__description h3:after {
   content: "";
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  width: 50px;
   height: 2px;
-  margin-left: -12.5px;
+  transform: translateX(-50%);
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
@@ -607,11 +607,17 @@ p {
     flex-direction: column;
     align-items: flex-start;
   }
+  #navbar.bgcolor {
+    background-color: var(--color-dark-blue);
+  }
   .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
     display: none;
+  }
+  .navbar__menu.open {
+    display: block;
   }
   .about__majors {
     flex-direction: column;
