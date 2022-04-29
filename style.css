@@ -97,7 +97,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 8px;
   background-color: transparent;
   color: var(--color-white);
   transition: all var(--animation-duration) ease-in-out;
@@ -106,7 +106,6 @@ p {
 
 #navbar.navbar--dark {
   background-color: var(--color-dark-blue);
-  padding: 16px;
 }
 
 .navbar__logo {
@@ -177,9 +176,13 @@ p {
   border-radius: 4px;
 }
 
+.home__contact:hover {
+  background-color: var(--color-blue);
+}
+
 /* Section common */
 .section {
-  padding: 50px;
+  padding: 60px 50px 40px;
   text-align: center;
   margin: auto;
 }
@@ -429,6 +432,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 .category__btn.selected,
 .category__btn:hover {
@@ -448,9 +452,9 @@ p {
   height: 24px;
   line-height: 24px;
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease;
 }
@@ -600,12 +604,35 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
   .navbar__toggle-btn {
     display: block;
+    top: 15px;
+    right: 15px;
+    font-size: var(--font-medium);
+  }
+
+  .home__avatar {
+    width: 200px;
+  }
+
+  .category__btn {
+    margin: 4px 0;
+    width: 100%;
   }
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+  }
+  #navbar.navbar--dark {
+    padding: 16px;
   }
   #navbar.bgcolor {
     background-color: var(--color-dark-blue);
@@ -619,11 +646,16 @@ p {
   .navbar__menu.open {
     display: block;
   }
+  .section {
+    padding: 40px 16px 16px;
+  }
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
   .skillset {
     flex-direction: column;
@@ -638,7 +670,25 @@ p {
     flex-grow: 1;
   }
   .testimonial__avatar {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+  }
+  .testimonial {
+    flex-direction: column;
+  }
+  .testimonial__avatar:nth-child(n) {
+    margin: 0 auto 8px;
+  }
+  .testimonial__speech-bubble {
+    /* Default is 0, so the order of testimonial__avatar is 0 */
+    order: 1;
+  }
+  .arrow-up {
+    bottom: 16px;
+    right: 16px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
   }
 }

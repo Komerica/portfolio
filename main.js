@@ -105,6 +105,38 @@ workBtnContainer.addEventListener("click", (e) => {
   // }
 });
 
+// Languages Circular Progress Bar JS
+const numb = document.querySelectorAll(".lang__number")[0];
+let counter = 0;
+setInterval(() => {
+  if (counter == 100) {
+    clearInterval();
+  } else {
+    counter += 1;
+    numb.textContent = counter + "%";
+  }
+}, 20);
+const numb2 = document.querySelectorAll(".lang__number")[1];
+let counter2 = 0;
+setInterval(() => {
+  if (counter2 == 75) {
+    clearInterval();
+  } else {
+    counter2 += 1;
+    numb2.textContent = counter2 + "%";
+  }
+}, 25);
+const numb3 = document.querySelectorAll(".lang__number")[2];
+let counter3 = 0;
+setInterval(() => {
+  if (counter3 == 50) {
+    clearInterval();
+  } else {
+    counter3 += 1;
+    numb3.textContent = counter3 + "%";
+  }
+}, 20);
+
 /*************************/
 /**** Utility Function ***/
 /*************************/
