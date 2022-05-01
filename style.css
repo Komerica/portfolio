@@ -122,8 +122,11 @@ p {
   margin: 0 4px;
   color: var(--color-white);
   cursor: pointer;
-  border: 1px solid transparent;
   border-radius: var(--size-border-radius);
+}
+
+.navbar__menu-item.active {
+  border: 1px solid var(--color-white);
 }
 
 .navbar__menu-item:hover {
@@ -614,8 +617,8 @@ p {
   }
   .navbar__toggle-btn {
     display: block;
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
     font-size: var(--font-medium);
   }
 
@@ -670,7 +673,7 @@ p {
     flex-grow: 1;
   }
   .testimonial__avatar {
-    width: 120px;
+    width: 105px;
     height: 120px;
   }
   .testimonial {
